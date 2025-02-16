@@ -4,6 +4,7 @@ title: "[Unreal] interactive water"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,simulation]
+image: 2024-07-05-interactive-water\IW_00.gif
 ---
 
 在实现水体交互的过程中，发现很多不错的交互效果其实只需要一步很简单的推导，包括ue的示例工程，以及shadertoy上的一些项目。从shadertoy的评论和shader中找到了公式最早的出处[Hugo Elias](https://web.archive.org/web/20160418004149/http://freespace.virgin.net/hugo.elias/graphics/x_water.htm)，但是文章中的解释和推导很难让人信服。后续则是通过对浅水方程的近似推导出经验公式的物理正确性，看起来合理的东西背后也是有其合理的原因。最后便是ue的实现部分。  

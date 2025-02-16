@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[PCG] procedural fogmap"
+title: "[PCG] procedural fogmap(WIP)"
 author: "Tianyi Song"
 categories: worklog
 tags: [pcg,fogmap]

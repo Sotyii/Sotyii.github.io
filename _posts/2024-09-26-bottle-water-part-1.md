@@ -4,6 +4,7 @@ title: "[Unreal] bottle water - part 1"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,simulation]
+image: 2024-09-26-bottle-water-part-1\BWP1_01.gif
 ---
 
 Part1主要记录如何在瓶内绘制液体，以及液体的物理表现实现。Part2会补充一些细节表现的实现，液体的张力，液面和水体中的气泡，随机的液体微动等等。  
