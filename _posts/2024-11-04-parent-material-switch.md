@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] parent material switch"
+title: "[Unreal] Parent Material Switch"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,material,python,batch,tool]

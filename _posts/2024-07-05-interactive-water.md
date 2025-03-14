@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] interactive water"
+title: "[Unreal] Interactive Water"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,simulation]
@@ -12,7 +12,9 @@ image: 2024-07-05-interactive-water\IW_00.gif
 reference:  
 [Ue交互水示例](https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-a-fluid-surface-with-blueprints-and-render-targets?application_version=4.27#4-endresult)  
 [shadertoy示例](https://www.shadertoy.com/view/3sB3WW)  
-[我的测试](https://www.shadertoy.com/view/MX3XWS)
+[我的测试](https://www.shadertoy.com/view/MX3XWS)  
+_*用鼠标点击和拖拽来交互_  
+<iframe width="100%" height="360" frameborder="0" src="https://www.shadertoy.com/embed/MX3XWS?gui=true&t=10&paused=false&muted=false" allowfullscreen style="display:block; margin:auto;"></iframe>
 
 
 <br>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] bottle water - part 1"
+title: "[Unreal] Bottle Water - Part 1"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,simulation]
