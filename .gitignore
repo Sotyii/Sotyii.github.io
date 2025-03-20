@@ -1,5 +1,5 @@
 _site
-_posts_fork
+_posts-fork
 Gemfile.lock
 *.gem
 .sass-cache

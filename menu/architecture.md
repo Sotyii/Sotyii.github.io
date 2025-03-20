@@ -1,4 +1,6 @@
 ---
-layout: page
+layout: archive-architecture
 title: Architecture
 permalink: /architecture
+---
+
