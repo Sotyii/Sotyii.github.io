@@ -10,6 +10,11 @@
 #   sort_field: 'date'
 #   sort_reverse: true
 
+# collections:
+collections:
+  posts-architecture:
+    output: true
+
 # jekyll-paginate configuration
 paginate:            5
 
