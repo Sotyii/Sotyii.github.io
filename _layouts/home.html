@@ -2,7 +2,8 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
+{% assign sorted_posts = paginator.posts | sort: 'date' | reverse %}
+{% for post in sorted_posts %}
   <div class="posts-container">
     <h1>
       <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
