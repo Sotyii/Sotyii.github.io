@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[UI] heatmap material"
+title: "[UI] Heatmap Material"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, ui]

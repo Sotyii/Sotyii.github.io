@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] particle flow"
+title: "[Unreal] Particle Flow"
 author: "Tianyi Song"
 categories: worklog
 tags: [Unreal, Niagara]

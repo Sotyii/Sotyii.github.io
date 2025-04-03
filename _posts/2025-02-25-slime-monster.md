@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] slime monster(WIP)"
+title: "[Unreal] Slime Monster(WIP)"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, simulation, sph, niagara, fluid, rendering]

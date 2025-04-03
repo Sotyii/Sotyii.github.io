@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[UI] custom hexagon"
+title: "[UI] Custom Hexagon"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, ui, hexagon]

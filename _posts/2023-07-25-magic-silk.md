@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Unreal] magic silk"
+title: "[Unreal] Magic Silk"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, material, fabric]
