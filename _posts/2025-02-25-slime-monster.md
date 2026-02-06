@@ -4,7 +4,7 @@ title: "[Unreal] Slime Monster(WIP)"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, simulation, sph, niagara, fluid, rendering]
-image: 2025-02-25-slime-monster\SM_00.gif
+image: GameDev/2025-02-25-slime-monster/SM_00.gif
 ---
 
 <br>
@@ -15,7 +15,7 @@ reference:
 <iframe width="100%"  height="400" src="https://www.youtube.com/embed/grmZ0I5-CgA" frameborder="0" allowfullscreen style="display:block; margin:auto;"></iframe>  
 raymarching能够很好的实现和史莱姆和碰撞（距离场）融合的特性，但是仅通过材质表现很难表现出很好的物理效果  
 这里通过整体的偏移来表达惯性，但还是少了很多内部运动带来的物理细节  
-<img src="{{ site.url }}/assets\img\2025-02-25-slime-monster\SM_01.gif" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-02-25-slime-monster/SM_01.gif" width="1000" 
 style="display:block; margin:auto;">  
 
 <br>

@@ -4,7 +4,7 @@ title: "[PCG] Procedural Octopus Animation"
 author: "Tianyi Song"
 categories: worklog
 tags: [pcg,animation]
-image: 2024-09-02-procedural-animation-octopus\PAO_02.gif
+image: GameDev/2024-09-02-procedural-animation-octopus/PAO_02.gif
 ---
 
 

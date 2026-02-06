@@ -4,7 +4,7 @@ title: "[Unreal] Underwater Fishman"
 author: "Tianyi Song"
 categories: worklog
 tags: [Unreal, Rendering, Procedural, Houdini]
-image: 2025-03-30-underwater-fishman\UF_00.gif
+image: GameDev/2025-03-30-underwater-fishman/UF_00.gif
 ---
 
 <br>

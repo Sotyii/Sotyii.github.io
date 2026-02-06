@@ -12,7 +12,7 @@ tags: [unreal,material,python,batch,tool]
 
 左图为原武器贴图通道，右图为通用材质贴图通道  
 多了一个specular level，塞到了ORM的alpha中  
-<img src="{{ site.url }}/assets\img\2024-11-04-parent-material-switch\PMS_01.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-11-04-parent-material-switch/PMS_01.png" width="1000" 
 style="display:block; margin:auto;">  
 
 <br>
@@ -149,7 +149,7 @@ assetTools.import_asset_tasks([task])
 **重命名**
 
 unreal.EditorAssetLibrary重命名  
-<img src="{{ site.url }}/assets\img\2024-11-04-parent-material-switch\PMS_02.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-11-04-parent-material-switch/PMS_02.png" width="1000" 
 style="display:block; margin:auto;">  
 
 ``` python
@@ -181,9 +181,9 @@ if not textureMName.upper().endswith('_ORM'):
 
 **设置**  
 都可以通过unreal.MaterialEditingLibrary中的方法来设置  
-<img src="{{ site.url }}/assets\img\2024-11-04-parent-material-switch\PMS_03.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-11-04-parent-material-switch/PMS_03.png" width="1000" 
 style="display:block; margin:auto;">  
-<img src="{{ site.url }}/assets\img\2024-11-04-parent-material-switch\PMS_04.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-11-04-parent-material-switch/PMS_04.png" width="1000" 
 style="display:block; margin:auto;">  
 
 <br>

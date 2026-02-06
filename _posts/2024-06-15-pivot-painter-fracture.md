@@ -4,7 +4,7 @@ title: "[PivotPainter] Fracture"
 author: "Tianyi Song"
 categories: practice
 tags: [unreal, pivot painter, fracture, houdini]
-image: 2024-06-15-pivot-paint-fracture\PPF_01.gif
+image: GameDev/2024-06-15-pivot-paint-fracture/PPF_01.gif
 ---
 
 在寻找ue破坏chaos的替代方案时发现的pivot painter相关的实现  

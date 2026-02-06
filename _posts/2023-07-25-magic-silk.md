@@ -4,7 +4,7 @@ title: "[Unreal] Magic Silk"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, material, fabric]
-image: 2023-07-25-magic-silk\MS_01.png
+image: GameDev/2023-07-25-magic-silk/MS_01.png
 ---
 
 
@@ -20,5 +20,5 @@ if ( GBuffer.ShadingModelID == SHADINGMODELID_DEFAULT_LIT && GBuffer.CustomData.
 }
 ```
 
-<img src="{{ site.url }}/assets\img\2023-07-25-magic-silk\MS_02.gif" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2023-07-25-magic-silk/MS_02.gif" width="1000" 
 style="display:block; margin:auto;">  

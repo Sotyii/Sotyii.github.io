@@ -4,7 +4,7 @@ title: "[UI] Custom Hexagon"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, ui, hexagon]
-image: 2025-03-28-custom-hexagon\CH_00.gif
+image: GameDev/2025-03-28-custom-hexagon/CH_00.gif
 ---
 
 <br>

@@ -4,7 +4,7 @@ title: "[UI] Heatmap Material"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal, ui]
-image: 2024-02-04-ui-heatmap\UH_01.gif
+image: GameDev/2024-02-04-ui-heatmap/UH_01.gif
 ---
 
 
@@ -35,11 +35,11 @@ uv的扰动形成边缘的变化
 亮点的移动和呼吸  
 
 <br>
-<img src="{{ site.url }}/assets\img\2024-02-04-ui-heatmap\UH_02.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-02-04-ui-heatmap/UH_02.png" width="1000" 
 style="display:block; margin:auto;">  
-<img src="{{ site.url }}/assets\img\2024-02-04-ui-heatmap\UH_03.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-02-04-ui-heatmap/UH_03.png" width="1000" 
 style="display:block; margin:auto;">  
-<img src="{{ site.url }}/assets\img\2024-02-04-ui-heatmap\UH_04.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-02-04-ui-heatmap/UH_04.png" width="1000" 
 style="display:block; margin:auto;">  
 
 ``` hlsl

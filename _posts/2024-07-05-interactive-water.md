@@ -4,7 +4,7 @@ title: "[Unreal] Interactive Water"
 author: "Tianyi Song"
 categories: worklog
 tags: [unreal,simulation]
-image: 2024-07-05-interactive-water\IW_00.gif
+image: GameDev/2024-07-05-interactive-water/IW_00.gif
 ---
 
 在实现水体交互的过程中，发现很多不错的交互效果其实只需要一步很简单的推导，包括ue的示例工程，以及shadertoy上的一些项目。从shadertoy的评论和shader中找到了公式最早的出处[Hugo Elias](https://web.archive.org/web/20160418004149/http://freespace.virgin.net/hugo.elias/graphics/x_water.htm)，但是文章中的解释和推导很难让人信服。后续则是通过对浅水方程的近似推导出经验公式的物理正确性，看起来合理的东西背后也是有其合理的原因。最后便是ue的实现部分。  
@@ -28,11 +28,11 @@ _*用鼠标点击和拖拽来交互_
 
 ## Hugo Elias 2D Water
 [Hugo Elias 2D Water](https://web.archive.org/web/20160418004149/http://freespace.virgin.net/hugo.elias/graphics/x_water.htm)  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_01.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_01.png" width="1000" 
 style="display:block; margin:auto;">  
 思路是通过前两帧的高度，来推出当前帧的高度  
 怎么推出，以下是作者的**“解释”**  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_02.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_02.png" width="1000" 
 style="display:block; margin:auto;">  
 
 ```
@@ -58,12 +58,12 @@ NewHeight(x, y) = (Smoothed(x, y)*2 + Velocity(x, y)) * Damping
 ## From SWE(Shallow Water Equation) to Hugo Elias 2D Water
 浅水方程的前提，同一水平位置下的不同深度的水速度相同  
 欧拉视角，将水离散成小的空间单位，对于每一个空间单位分析，如下图所示平面单元  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_03.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_03.png" width="400" 
 style="display:block; margin:auto;">  
 在浅水方程中，通过联立两个方程，单位空间的质量守恒（流入和流出的体积变化）和动量守恒（受力和速度变化）来求解  
 
 **质量守恒**
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_04.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_04.png" width="1000" 
 style="display:block; margin:auto;">  
 通过体积变化联立速度和高度的关系，简单的数学：  
 速度 x 截面面积 x 时间  
@@ -76,7 +76,7 @@ $$dh_{x} = (v_{左} - v_{右}) * h_{x} *dt / dx$$
 <br>
 
 **动量守恒**
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_05.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_05.png" width="1000" 
 style="display:block; margin:auto;">  
 这里分析单元的速度变化，速度的变化来源于受力，受力来自与两侧因为高度差产生的压力，简单的数学：  
 压强 x 受力面积 x 时间 / 质量  
@@ -95,7 +95,7 @@ $$dv_{x-0.5}=(h_{x-1} - h_{x})*g*dt/dx$$
 在这套网格下等式可以更新为：  
 $$dv_{x}=(h_{x-1} - h_{x})*g*dt/dx$$  
 
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_06.png" width="300" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_06.png" width="300" 
 style="display:block; margin:auto;">  
 
 
@@ -122,7 +122,7 @@ $$dh_{(x,t)}=h_{(x,t+1)}-h_{(x,t)}$$带入
 最终便简化到了这样一个眼熟的等式，
 $$h_{(x,t+1)} = 2h_{(x,t)}- h_{(x,t-1)} +(h_{(x-1,t)}  + h_{(x+1,t)} - 2h_{(x,t)})*s$$  
 可以发现在s等于1时，和Elias Hugo的等式是一致的  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_07.jpg" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_07.jpg" width="1000" 
 style="display:block; margin:auto;">  
 
 <br>
@@ -134,15 +134,15 @@ ue的niagara grid2d很契合2d的模拟
 - 根据角色输入，水面高度计算输入水面高度
 - 模拟计算
 - 通过高度计算法线并写入rt
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_07.png" width="200" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_07.png" width="200" 
 style="display:block;margin:auto;">  
 角色的输入可以通过蓝图或者其他方式给到niagara data interface  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_08.jpg" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_08.jpg" width="1000" 
 style="display:block; margin:auto;">  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_09.jpg" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_09.jpg" width="1000" 
 style="display:block; margin:auto;">  
 具体解算部分shader:  
-<img src="{{ site.url }}/assets\img\2024-07-05-interactive-water\IW_10.png" width="1000" 
+<img src="{{ site.url }}/assets/img/GameDev/2024-07-05-interactive-water/IW_10.png" width="1000" 
 style="display:block; margin:auto;">  
 
 <br>

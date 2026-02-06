@@ -4,7 +4,7 @@ title: "[Unreal] Particle Flow"
 author: "Tianyi Song"
 categories: worklog
 tags: [Unreal, Niagara]
-image: 2025-02-18-particle-flow\PF_00.gif
+image: GameDev/2025-02-18-particle-flow/PF_00.gif
 ---
 
 <br>

@@ -4,7 +4,7 @@ title: "[Unreal] Tonemap to DaVinci"
 author: "Tianyi Song"
 categories: worklog
 tags: [Unreal, Rendering, Postprocess, DaVinci, Tonemap]
-image: 2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_01.png
+image: GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_01.png
 ---
 
 <br>
@@ -61,7 +61,7 @@ with open(file_path, "w") as f:
 ## UE Tonemap过程
 
 ue tonemap分为两步，先将tonemap写入到lut(CombineLUTS)，然后采样lut来做tonemap(Tonemap)  
-<img src="{{ site.url }}/assets\img\2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_00.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_00.png" width="400" 
 style="display:block; margin:auto;">  
 
 <br>
@@ -731,19 +731,19 @@ with open(file_path, "w") as f:
 ### 3 - 结果对比
 
 截帧Final Color  
-<img src="{{ site.url }}/assets\img\2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_01.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_01.png" width="400" 
 style="display:block; margin:auto;">  
 
 截帧Scene Color + LUT  
-<img src="{{ site.url }}/assets\img\2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_02.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_02.png" width="400" 
 style="display:block; margin:auto;">  
 
 MRQ exr with tonemap, linear to srgb  
-<img src="{{ site.url }}/assets\img\2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_03.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_03.png" width="400" 
 style="display:block; margin:auto;">  
 
 MRQ exr disabled tonemap, custom lut  
-<img src="{{ site.url }}/assets\img\2025-06-13-UE-tonemap-to-DaVinci\UE2DaVinci_04.png" width="400" 
+<img src="{{ site.url }}/assets/img/GameDev/2025-06-13-UE-tonemap-to-DaVinci/UE2DaVinci_04.png" width="400" 
 style="display:block; margin:auto;">  
 
 <br>
