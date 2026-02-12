@@ -14,6 +14,10 @@
 collections:
   posts-architecture:
     output: true
+  posts-gamedev:
+    output: true
+  posts-ai:
+    output: true
 
 # jekyll-paginate configuration
 paginate:            5
