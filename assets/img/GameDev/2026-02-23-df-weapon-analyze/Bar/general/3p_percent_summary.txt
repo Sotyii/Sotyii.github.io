@@ -1,0 +1,7 @@
+Percent Summary
+Min: 0.1749
+Average: 0.3450
+Median: 0.3291
+Max: 0.5627
+75th Percentile: 0.3793
+Most concentrated range: 0.2912 - 0.3300 (approx)

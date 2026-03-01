@@ -1,0 +1,7 @@
+Face Count Summary
+Min: 126
+Average: 952
+Median: 747
+Max: 5279
+75th Percentile: 1276
+Most concentrated range: 126 - 641 (approx)

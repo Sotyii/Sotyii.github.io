@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% assign sorted_posts = paginator.posts | sort: 'date' | reverse %}
+{% assign sorted_posts = site["posts-gamedev"] | sort: 'date' | reverse %}
 {% for post in sorted_posts %}
-  <div class="posts-container">
+  <div class="posts-container" data-post-item>
     <h1>
       <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
     </h1>
@@ -19,16 +19,78 @@ layout: default
     </p>
   </div>
 {% endfor %}
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-  {% endif %}
+
+<!-- Pagination -->
+<div class="pagination" id="pagination-controls">
+  <span class="pagination-button" id="btn-newer">{{ site.data.settings.pagination.next_page }}</span>
+  <span class="pagination-info" id="page-info" style="margin: 0 10px; line-height: 2.5;"></span>
+  <span class="pagination-button" id="btn-older">{{ site.data.settings.pagination.previous_page }}</span>
 </div>
+
+<script>
+(function() {
+  var perPage = {{ site.paginate | default: 5 }};
+  var posts = document.querySelectorAll('[data-post-item]');
+  var total = posts.length;
+  var totalPages = Math.ceil(total / perPage);
+  var currentPage = 1;
+
+  // Read page from URL hash
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#page-(\d+)$/)) {
+    currentPage = parseInt(RegExp.$1, 10);
+    if (currentPage < 1) currentPage = 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+  }
+
+  var btnNewer = document.getElementById('btn-newer');
+  var btnOlder = document.getElementById('btn-older');
+  var pageInfo = document.getElementById('page-info');
+  var paginationControls = document.getElementById('pagination-controls');
+
+  function showPage(page) {
+    currentPage = page;
+    var start = (page - 1) * perPage;
+    var end = start + perPage;
+    for (var i = 0; i < total; i++) {
+      posts[i].style.display = (i >= start && i < end) ? '' : 'none';
+    }
+    // Update URL hash without scrolling
+    history.replaceState(null, null, '#page-' + page);
+    // Update page info
+    pageInfo.textContent = page + ' / ' + totalPages;
+    // Update button states
+    if (page > 1) {
+      btnNewer.classList.add('pagination-active');
+      btnNewer.style.cursor = 'pointer';
+    } else {
+      btnNewer.classList.remove('pagination-active');
+      btnNewer.style.cursor = 'default';
+    }
+    if (page < totalPages) {
+      btnOlder.classList.add('pagination-active');
+      btnOlder.style.cursor = 'pointer';
+    } else {
+      btnOlder.classList.remove('pagination-active');
+      btnOlder.style.cursor = 'default';
+    }
+    // Scroll to top
+    window.scrollTo(0, 0);
+  }
+
+  btnNewer.addEventListener('click', function() {
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
+
+  btnOlder.addEventListener('click', function() {
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
+
+  // Hide pagination if only one page
+  if (totalPages <= 1) {
+    paginationControls.style.display = 'none';
+  }
+
+  showPage(currentPage);
+})();
+</script>
